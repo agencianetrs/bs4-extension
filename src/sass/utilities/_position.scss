@@ -1,0 +1,29 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $position in $positions {
+            .position#{$infix}-#{$position} {
+                position: $position !important;
+            }
+        }
+
+        .position#{$infix}-inherit {
+            position: inherit !important;
+        }
+
+        @each $z-index in $z-indexes {
+            .z-index#{$infix}-#{$z-index} {
+                z-index: $z-index !important;
+            }
+        }
+
+        .z-index#{$infix}-n1 {
+            z-index: -1 !important;
+        }
+
+        .z-index#{$infix}-inherit {
+            z-index: inherit !important;
+        }
+    }
+}

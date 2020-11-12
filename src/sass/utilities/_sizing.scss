@@ -1,0 +1,57 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $prop,
+        $abbrev in (width: w, height: h) {
+
+            @each $size,
+            $value in $pixel-sizes {
+                .#{$abbrev}#{$infix}-#{$size} {
+                    #{$prop}: $value !important;
+                }
+            }
+
+            // large
+
+            @each $size,
+            $value in $pixel-large-sizes {
+                .#{$abbrev}#{$infix}-#{$size} {
+                    #{$prop}: $value !important;
+                }
+            }
+
+            // percent
+
+            @each $size,
+            $value in $percent-sizes {
+                .#{$abbrev}#{$infix}-#{$size}p {
+                    #{$prop}: $value !important;
+                }
+            }
+
+            .#{$abbrev}#{$infix}-auto {
+                #{$prop}: auto !important;
+            }
+
+            .#{$abbrev}#{$infix}-inherit {
+                #{$prop}: inherit !important;
+            }
+        }
+
+        @each $size,
+        $value in $pixel-large-sizes {
+            .minh#{$infix}-#{$size} {
+                min-height: #{$value} !important;
+            }
+        }
+
+        .minh#{$infix}-auto {
+            min-height: auto !important;
+        }
+
+        .minh#{$infix}-inherit {
+            min-height: inherit !important;
+        }
+    }
+}

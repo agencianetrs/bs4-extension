@@ -1,0 +1,123 @@
+@each $size,
+$value in $pixel-sizes {
+
+    // radius
+
+    .rounded-#{$size} {
+        border-radius: $value !important;
+    }
+
+    .rounded-top-#{$size},
+    .rounded-left-#{$size},
+    .rounded-top-left-#{$size} {
+        border-top-left-radius: $value !important;
+    }
+
+    .rounded-top-#{$size},
+    .rounded-right-#{$size},
+    .rounded-top-right-#{$size} {
+        border-top-right-radius: $value !important;
+    }
+
+    .rounded-bottom-#{$size},
+    .rounded-left-#{$size},
+    .rounded-bottom-left-#{$size} {
+        border-bottom-left-radius: $value !important;
+    }
+
+    .rounded-bottom-#{$size},
+    .rounded-right-#{$size},
+    .rounded-bottom-right-#{$size} {
+        border-bottom-right-radius: $value !important;
+    }
+}
+
+// inherit
+
+.rounded-inherit {
+    border-radius: inherit !important;
+}
+
+.rounded-top-inherit,
+.rounded-left-inherit,
+.rounded-top-left-inherit {
+    border-top-left-radius: inherit !important;
+}
+
+.rounded-top-inherit,
+.rounded-right-inherit,
+.rounded-top-right-inherit {
+    border-top-right-radius: inherit !important;
+}
+
+.rounded-bottom-inherit,
+.rounded-left-inherit,
+.rounded-bottom-left-inherit {
+    border-bottom-left-radius: inherit !important;
+}
+
+.rounded-bottom-inherit,
+.rounded-right-inherit,
+.rounded-bottom-right-inherit {
+    border-bottom-right-radius: inherit !important;
+}
+
+@each $size,
+$value in $pixel-sizes {
+
+    // width
+
+    .border-#{$size} {
+        border-width: $value !important;
+    }
+
+    .border-top-#{$size} {
+        border-top-width: $value !important;
+    }
+
+    .border-right-#{$size} {
+        border-right-width: $value !important;
+    }
+
+    .border-bottom-#{$size} {
+        border-bottom-width: $value !important;
+    }
+
+    .border-left-#{$size} {
+        border-left-width: $value !important;
+    }
+}
+
+// inherit
+
+.border-width-inherit {
+    border-width: inherit !important;
+}
+
+.border-top-width-inherit {
+    border-top-width: inherit !important;
+}
+
+.border-right-width-inherit {
+    border-right-width: inherit !important;
+}
+
+.border-bottom-width-inherit {
+    border-bottom-width: inherit !important;
+}
+
+.border-left-width-inherit {
+    border-left-width: inherit !important;
+}
+
+// style
+
+@each $border-style in $border-styles {
+    .border-#{$border-style} {
+        border-style: $border-style !important;
+    }
+}
+
+.border-style-inherit {
+    border-style: inherit !important;
+}

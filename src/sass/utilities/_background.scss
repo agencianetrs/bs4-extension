@@ -1,0 +1,50 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        // position
+
+        @each $bg-position,
+        $value in $bg-positions {
+            .bg#{$infix}-#{$bg-position} {
+                background-position: #{$value} !important;
+            }
+        }
+
+        .bg-position#{$infix}-inherit {
+            background-position: inherit !important;
+        }
+
+        // repeat
+
+        @each $bg-repeat in $bg-repeats {
+            .bg#{$infix}-#{$bg-repeat} {
+                background-repeat: #{$bg-repeat} !important;
+            }
+        }
+
+        // sizes
+
+        @each $bg-size in $bg-sizes {
+            .bg#{$infix}-#{$bg-size} {
+                background-size: #{$bg-size} !important;
+            }
+        }
+
+        .bg-repeat#{$infix}-inherit {
+            background-repeat: inherit !important;
+        }
+
+        // attachment
+
+        @each $bg-attachment in $bg-attachments {
+            .bg#{$infix}-#{$bg-attachment} {
+                background-attachment: #{$bg-attachment} !important;
+            }
+        }
+
+        .bg-attachment#{$infix}-inherit {
+            background-attachment: inherit !important;
+        }
+    }
+}

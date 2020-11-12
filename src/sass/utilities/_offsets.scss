@@ -1,0 +1,48 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $offset in (top, right, bottom, left) {
+
+            @each $size,
+            $value in $pixel-sizes {
+                .#{$offset}#{$infix}-#{$size} {
+                    #{$offset}: $value !important;
+                }
+            }
+
+            @each $size,
+            $value in $percent-sizes {
+                .#{$offset}#{$infix}-#{$size}p {
+                    #{$offset}: $value !important;
+                }
+            }
+
+            .#{$offset}#{$infix}-auto {
+                #{$offset}: auto !important;
+            }
+
+            .#{$offset}#{$infix}-inherit {
+                #{$offset}: inherit !important;
+            }
+
+            // valor negativo
+
+            @each $size,
+            $value in $pixel-sizes {
+                @if $size !=0 {
+                    .#{$offset}#{$infix}-n#{$size} {
+                        #{$offset}: -$value !important;
+                    }
+                }
+            }
+
+            @each $size,
+            $value in $percent-sizes {
+                .#{$offset}#{$infix}-n#{$size}p {
+                    #{$offset}: -$value !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        // size
+
+        @if $enable-font-size-complete-classes {
+            @for $i from 1 through 100 {
+                .font-size#{$infix}-#{$i} {
+                    font-size: #{$i}px;
+                }
+            }
+
+            .font-size#{$infix}-200 {
+                font-size: 200px !important;
+            }
+        }
+
+        @else {
+
+            @each $font-size,
+            $value in $font-sizes {
+                .font-size#{$infix}-#{$font-size} {
+                    font-size: $value !important;
+                }
+            }
+        }
+
+        .font-size#{$infix}-inherit {
+            font-size: inherit !important;
+        }
+
+        // spacing
+
+        @each $letter-spacing,
+        $value in $letter-spacings {
+            .letter-spacing#{$infix}-#{$letter-spacing} {
+                letter-spacing: $value !important;
+            }
+        }
+
+        .letter-spacing#{$infix}-inherit {
+            letter-spacing: inherit !important;
+        }
+    }
+}
+
+@each $font-weight in $font-weights {
+    .font-weight-#{$font-weight} {
+        font-weight: $font-weight !important;
+    }
+}
+
+.font-weight-inherit {
+    font-weight: inherit !important;
+}
+
+.line-height-normal {
+    line-height: normal !important;
+}
+
+.line-height-inherit {
+    line-height: inherit !important;
+}
+
+// misc
+
+.text-underline {
+    text-decoration: underline !important;
+}

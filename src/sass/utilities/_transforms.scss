@@ -1,0 +1,73 @@
+@if $enable-transforms {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+            @each $size,
+            $value in $pixel-sizes {
+                .translateX#{$infix}-#{$size} {
+                    transform: translateX(#{$value}) !important;
+                }
+
+                .translateY#{$infix}-#{$size} {
+                    transform: translateY(#{$value}) !important;
+                }
+            }
+
+            @each $size,
+            $value in $percent-sizes {
+                .translateX#{$infix}-#{$size}p {
+                    transform: translateX(#{$value}) !important;
+                }
+
+                .translateY#{$infix}-#{$size}p {
+                    transform: translateY(#{$value}) !important;
+                }
+
+                // negative
+
+                .translateX#{$infix}-n#{$size}p {
+                    transform: translateX(-#{$value}) !important;
+                }
+
+                .translateY#{$infix}-n#{$size}p {
+                    transform: translateY(-#{$value}) !important;
+                }
+            }
+
+            .translate#{$infix}-center {
+                transform: translate(-50%, -50%) !important;
+            }
+
+            @each $rotate,
+            $value in $rotates {
+                .rotate#{$infix}-#{$rotate} {
+                    transform: rotate(#{$value}) !important;
+                }
+
+                // negative
+
+                @if ($rotate !=0) {
+                    .rotate#{$infix}-n#{$rotate} {
+                        transform: rotate(-#{$value}) !important;
+                    }
+                }
+            }
+
+            @each $scale,
+            $value in $scales {
+                .scale#{$infix}-#{$scale} {
+                    transform: scale(#{$value}) !important;
+                }
+            }
+
+            .transform#{$infix}-none {
+                transform: none !important;
+            }
+
+            .transform#{$infix}-inherit {
+                transform: inherit !important;
+            }
+        }
+    }
+}
