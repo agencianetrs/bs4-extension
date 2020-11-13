@@ -32,6 +32,32 @@
                 }
             }
 
+            @if ($abbrev)==m {
+                .#{$abbrev}#{$infix}-auto {
+                    margin: auto !important;
+                }
+
+                .#{$abbrev}t#{$infix}-auto,
+                .#{$abbrev}y#{$infix}-auto {
+                    margin: auto !important;
+                }
+
+                .#{$abbrev}r#{$infix}-auto,
+                .#{$abbrev}x#{$infix}-auto {
+                    margin: auto !important;
+                }
+
+                .#{$abbrev}b#{$infix}-auto,
+                .#{$abbrev}y#{$infix}-auto {
+                    margin: auto !important;
+                }
+
+                .#{$abbrev}l#{$infix}-auto,
+                .#{$abbrev}x#{$infix}-auto {
+                    margin: auto !important;
+                }
+            }
+
             // inherit
 
             .#{$abbrev}#{$infix}-inherit {
