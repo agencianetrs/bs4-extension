@@ -3,6 +3,14 @@
         @include media-breakpoint-up($breakpoint) {
             $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
+            .transform#{$infix}-none {
+                transform: none !important;
+            }
+
+            .transform#{$infix}-inherit {
+                transform: inherit !important;
+            }
+
             @each $size,
             $value in $pixel-sizes {
                 .translateX#{$infix}-#{$size} {
@@ -11,6 +19,19 @@
 
                 .translateY#{$infix}-#{$size} {
                     transform: translateY(#{$value}) !important;
+                }
+
+                // negative
+
+                @if $size>0 {
+
+                    .translateX#{$infix}-n#{$size} {
+                        transform: translateX(#{-$value}) !important;
+                    }
+
+                    .translateY#{$infix}-n#{$size} {
+                        transform: translateY(#{-$value}) !important;
+                    }
                 }
             }
 
@@ -59,14 +80,6 @@
                 .scale#{$infix}-#{$scale} {
                     transform: scale(#{$value}) !important;
                 }
-            }
-
-            .transform#{$infix}-none {
-                transform: none !important;
-            }
-
-            .transform#{$infix}-inherit {
-                transform: inherit !important;
             }
         }
     }
