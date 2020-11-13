@@ -23,6 +23,10 @@
             }
         }
 
+        .bg-repeat#{$infix}-inherit {
+            background-repeat: inherit !important;
+        }
+
         // sizes
 
         @each $bg-size in $bg-sizes {
@@ -31,8 +35,8 @@
             }
         }
 
-        .bg-repeat#{$infix}-inherit {
-            background-repeat: inherit !important;
+        .bg-size#{$infix}-inherit {
+            background-size: inherit !important;
         }
 
         // attachment
