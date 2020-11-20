@@ -11508,22 +11508,22 @@
 
 .mt-auto,
 .my-auto {
-  margin: auto !important;
+  margin-top: auto !important;
 }
 
 .mr-auto,
 .mx-auto {
-  margin: auto !important;
+  margin-right: auto !important;
 }
 
 .mb-auto,
 .my-auto {
-  margin: auto !important;
+  margin-bottom: auto !important;
 }
 
 .ml-auto,
 .mx-auto {
-  margin: auto !important;
+  margin-left: auto !important;
 }
 
 .m-inherit {
@@ -12733,22 +12733,22 @@
 
   .mt-sm-auto,
   .my-sm-auto {
-    margin: auto !important;
+    margin-top: auto !important;
   }
 
   .mr-sm-auto,
   .mx-sm-auto {
-    margin: auto !important;
+    margin-right: auto !important;
   }
 
   .mb-sm-auto,
   .my-sm-auto {
-    margin: auto !important;
+    margin-bottom: auto !important;
   }
 
   .ml-sm-auto,
   .mx-sm-auto {
-    margin: auto !important;
+    margin-left: auto !important;
   }
 
   .m-sm-inherit {
@@ -13959,22 +13959,22 @@
 
   .mt-md-auto,
   .my-md-auto {
-    margin: auto !important;
+    margin-top: auto !important;
   }
 
   .mr-md-auto,
   .mx-md-auto {
-    margin: auto !important;
+    margin-right: auto !important;
   }
 
   .mb-md-auto,
   .my-md-auto {
-    margin: auto !important;
+    margin-bottom: auto !important;
   }
 
   .ml-md-auto,
   .mx-md-auto {
-    margin: auto !important;
+    margin-left: auto !important;
   }
 
   .m-md-inherit {
@@ -15185,22 +15185,22 @@
 
   .mt-lg-auto,
   .my-lg-auto {
-    margin: auto !important;
+    margin-top: auto !important;
   }
 
   .mr-lg-auto,
   .mx-lg-auto {
-    margin: auto !important;
+    margin-right: auto !important;
   }
 
   .mb-lg-auto,
   .my-lg-auto {
-    margin: auto !important;
+    margin-bottom: auto !important;
   }
 
   .ml-lg-auto,
   .mx-lg-auto {
-    margin: auto !important;
+    margin-left: auto !important;
   }
 
   .m-lg-inherit {
@@ -16411,22 +16411,22 @@
 
   .mt-xl-auto,
   .my-xl-auto {
-    margin: auto !important;
+    margin-top: auto !important;
   }
 
   .mr-xl-auto,
   .mx-xl-auto {
-    margin: auto !important;
+    margin-right: auto !important;
   }
 
   .mb-xl-auto,
   .my-xl-auto {
-    margin: auto !important;
+    margin-bottom: auto !important;
   }
 
   .ml-xl-auto,
   .mx-xl-auto {
-    margin: auto !important;
+    margin-left: auto !important;
   }
 
   .m-xl-inherit {
