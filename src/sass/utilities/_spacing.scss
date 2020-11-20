@@ -39,22 +39,22 @@
 
                 .#{$abbrev}t#{$infix}-auto,
                 .#{$abbrev}y#{$infix}-auto {
-                    margin: auto !important;
+                    margin-top: auto !important;
                 }
 
                 .#{$abbrev}r#{$infix}-auto,
                 .#{$abbrev}x#{$infix}-auto {
-                    margin: auto !important;
+                    margin-right: auto !important;
                 }
 
                 .#{$abbrev}b#{$infix}-auto,
                 .#{$abbrev}y#{$infix}-auto {
-                    margin: auto !important;
+                    margin-bottom: auto !important;
                 }
 
                 .#{$abbrev}l#{$infix}-auto,
                 .#{$abbrev}x#{$infix}-auto {
-                    margin: auto !important;
+                    margin-left: auto !important;
                 }
             }
 
